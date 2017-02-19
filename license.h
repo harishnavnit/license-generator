@@ -20,9 +20,9 @@ public:
     void saveToFile(QString fileName, QString path=QDir::homePath());
 
     // Getter methods
-    uint getLicenseHash() const;
     QDate getExpiryDate() const;
     QString getMacAddress() const;
+    QByteArray getLicenseHash() const;
 
 public slots:
     void setExpiryDate(QDate date);
@@ -30,9 +30,9 @@ public slots:
     void generateLicenseHash(QString mac);
 
 private:
-    uint m_licenseHash;
     QDate m_expiryDate;
     QString m_macAddress;
+    QByteArray m_licenseHash;
 };
 
 #endif // LICENSE_H
