@@ -48,7 +48,7 @@ void License::saveToFile(QString fileName, QString path)
         return;
     }
     QTextStream stream(&file);
-    stream << "\n" << m_expiryDate.toString("ddMMyyyy");
+    stream << endl << m_expiryDate.toString("dd.MM.yyyy");
     file.close();
 }
 
